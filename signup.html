@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 400px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        input[type="password"] {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 5px;
+            padding: 12px;
+            margin-bottom: 15px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        input[type="text"]:focus, 
+        input[type="email"]:focus, 
+        input[type="password"]:focus {
+            outline: none;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        input::placeholder {
+            color: #e0e0e0;
+        }
+
+        .submit-btn {
+            background-color: #5c00e6;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #4d00b3;
+        }
+
+        /* Social Buttons */
+        .social-login {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-btn {
+            display: inline-block;
+            width: 48%;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .social-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .google-btn {
+            background-color: #db4437;
+        }
+
+        .facebook-btn {
+            background-color: #4267B2;
+        }
+
+        .terms {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #cccccc;
+        }
+
+        .terms a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .terms a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .container {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .submit-btn, .social-btn {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit" class="submit-btn">Sign Up</button>
+        </form>
+
+        <div class="social-login">
+            <div class="social-btn google-btn">Sign up with Google</div>
+            <div class="social-btn facebook-btn">Sign up with Facebook</div>
+        </div>
+
+        <div class="terms">
+            <p>By signing up, you agree to our <a href="#">Terms & Conditions</a></p>
+        </div>
+    </div>
+</body>
+</html>
